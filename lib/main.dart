@@ -1,6 +1,6 @@
 // ignore_for_file: unused_import
 
-import 'package:assignment_ui/BottomNav&Tab/screens/TabHomeScreen.dart';
+import 'package:assignment_ui/WhatsappUi/screens/TabHomeScreen.dart';
 import 'package:assignment_ui/ContactBook_ui/ContactUiSplash.dart';
 import 'package:assignment_ui/Hotel%20app/HotelAppHome.dart';
 import 'package:assignment_ui/ContactBook_ui/ContactBookHomeScreen.dart';
