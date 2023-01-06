@@ -45,37 +45,35 @@ class ProfileUiTwoHome extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    IconButton(
-                        onPressed: () {},
-                        icon: FaIcon(
-                          FontAwesomeIcons.facebook,
-                          color: Colors.blue,
-                          size: 40,
-                        )),
-                    SizedBox(width: 15),
-                    IconButton(
-                        onPressed: () {},
-                        icon: FaIcon(
-                          FontAwesomeIcons.twitter,
-                          color: Colors.lightBlue,
-                          size: 40,
-                        )),
-                    SizedBox(width: 15),
-                    IconButton(
-                        onPressed: () {},
-                        icon: FaIcon(
-                          FontAwesomeIcons.linkedinIn,
-                          color: Colors.blue.shade700,
-                          size: 40,
-                        )),
-                    SizedBox(width: 15),
-                    IconButton(
-                        onPressed: () {},
-                        icon: FaIcon(
-                          FontAwesomeIcons.github,
-                          color: Colors.black,
-                          size: 40,
-                        ))
+                    FaIcon(
+                      FontAwesomeIcons.facebook,
+                      color: Colors.blue,
+                      size: 40,
+                    ),
+                    SizedBox(width: 18),
+                    CircleAvatar(
+                      backgroundColor: Colors.lightBlue,
+                      child: FaIcon(
+                        FontAwesomeIcons.twitter,
+                        color: Colors.white,
+                        size: 20,
+                      ),
+                    ),
+                    SizedBox(width: 18),
+                    CircleAvatar(
+                      backgroundColor: Colors.blue.shade700,
+                      child: FaIcon(
+                        FontAwesomeIcons.linkedinIn,
+                        color: Colors.white,
+                        size: 20,
+                      ),
+                    ),
+                    SizedBox(width: 18),
+                    FaIcon(
+                      FontAwesomeIcons.github,
+                      color: Colors.black,
+                      size: 40,
+                    )
                   ],
                 ),
               ),
