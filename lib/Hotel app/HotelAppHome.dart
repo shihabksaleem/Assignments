@@ -54,9 +54,9 @@ class ScreenHotelApp extends StatelessWidget {
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
-                backgroundColor: Color(0xFF00dbfd9),
+                backgroundColor: Color(0xFF00dbf9),
                 expandedHeight: 180,
-                floating: true,
+                pinned: true,
                 leading: Icon(Icons.menu),
                 actions: [
                   IconButton(

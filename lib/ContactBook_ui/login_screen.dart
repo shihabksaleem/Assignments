@@ -84,6 +84,7 @@ class ScreenLogin extends StatelessWidget {
                   height: 30,
                 ),
                 TextFormField(
+                  obscureText: true,
                   validator: (pass) {
                     if (pass!.length < 8 || pass.isEmpty) {
                       return 'Invalid Password';
