@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/Blogs_List_Builder.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/Category_grid.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/Store_Item_Grid.dart';
@@ -9,6 +11,7 @@ import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/review_corrousel.
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/sliver_appbaar.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/top_icon_card.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ShoppingCart extends StatelessWidget {
   List chips = [
@@ -156,7 +159,112 @@ class ShoppingCart extends StatelessWidget {
                         color: Colors.grey.shade700),
                   ),
                 ),
-                ReviewCarrousel()
+                ReviewCarrousel(),
+                const Padding(
+                  padding:
+                      EdgeInsets.only(left: 30, right: 30, top: 30, bottom: 15),
+                  child: Text(
+                    'This Kochi-Based-farm-to-fork online marketplace is connecting farmers directly to customers',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(height: 1.5, fontSize: 13),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image.network(
+                      'https://upload.wikimedia.org/wikipedia/commons/9/9a/The_Economic_Times_logo.png',
+                      width: 100,
+                    ),
+                    Image.network(
+                      'https://files.startupranking.com/startup/thumb/8034_2064627540c3c27254a71b819c5011a6bb226729_yourstory_m.png',
+                      width: 50,
+                    ),
+                    Image.network(
+                      'https://marketing.readwhere.com/newindian-logo.png',
+                      width: 60,
+                    ),
+                    Image.network(
+                      'https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Manorama_News.svg/150px-Manorama_News.svg.png',
+                      width: 30,
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Divider(
+                  thickness: 8,
+                  color: Color(0xffcde0d5),
+                ),
+                ListTile(
+                  title: const Text(
+                    'Get To Know Us',
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
+                  ),
+                  subtitle: Wrap(
+                    children: const [
+                      Text('About Us   |', style: TextStyle(fontSize: 10)),
+                      SizedBox(width: 10),
+                      Text('About Us   |', style: TextStyle(fontSize: 10)),
+                      SizedBox(width: 10),
+                      Text('About Us  ', style: TextStyle(fontSize: 10)),
+                    ],
+                  ),
+                ),
+                ListTile(
+                  title: const Text(
+                    'Useful Links',
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
+                  ),
+                  subtitle: Wrap(
+                    children: const [
+                      Text('Privacy Policy   |',
+                          style: TextStyle(fontSize: 10)),
+                      SizedBox(width: 10),
+                      Text('Return & Refund Policy   |',
+                          style: TextStyle(fontSize: 10)),
+                      SizedBox(width: 10),
+                      Text('Terms & Condition  ',
+                          style: TextStyle(fontSize: 10)),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.twitter,
+                        color: Colors.grey,
+                      ),
+                      SizedBox(width: 30),
+                      FaIcon(
+                        FontAwesomeIcons.youtube,
+                        color: Colors.grey,
+                      ),
+                      SizedBox(width: 30),
+                      FaIcon(
+                        FontAwesomeIcons.facebook,
+                        color: Colors.grey,
+                      ),
+                      SizedBox(width: 30),
+                      FaIcon(
+                        FontAwesomeIcons.instagram,
+                        color: Colors.grey,
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(20),
+                  color: Color(0xff01b748),
+                  child: Text(
+                      'Copyright © 2023 Farmers Fresh Zone . All Rights Reserved. V 2.40.22',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 10, color: Colors.white)),
+                )
               ],
             ),
           )
@@ -164,9 +272,9 @@ class ShoppingCart extends StatelessWidget {
       ),
       // ignore: prefer_const_literals_to_create_immutables
       bottomNavigationBar: BottomNavigationBar(
+          elevation: 10,
           type: BottomNavigationBarType.fixed,
-          selectedIconTheme: const IconThemeData(color: Color(0xff01b748)),
-          selectedLabelStyle: const TextStyle(color: Colors.green),
+          selectedItemColor: Color(0xff01b748),
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(
