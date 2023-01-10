@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 class ReviewCarrousel extends StatelessWidget {
   List reviewCarrouselList = [
-    CustomerReviews(),
-    CustomerReviews(),
-    CustomerReviews(),
-    CustomerReviews(),
+    const CustomerReviews(),
+    const CustomerReviews(),
+    const CustomerReviews(),
+    const CustomerReviews(),
   ];
 
   @override
