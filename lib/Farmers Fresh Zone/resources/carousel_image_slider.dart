@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 
 class CarouselImageSlider extends StatelessWidget {
   const CarouselImageSlider({
-    Key? key,
     required this.CarouselItemsList,
-  }) : super(key: key);
+  });
 
   final List CarouselItemsList;
 
@@ -15,15 +14,14 @@ class CarouselImageSlider extends StatelessWidget {
       itemBuilder: (context, index, realIndex) => Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                fit: BoxFit.cover,
-                image: NetworkImage(
-                  CarouselItemsList[index],
-                ))),
+                image: AssetImage(
+          CarouselItemsList[index],
+        ))),
       ),
       itemCount: CarouselItemsList.length,
       options: CarouselOptions(
         pageSnapping: true,
-        aspectRatio: 16 / 8,
+        aspectRatio: 16 / 7,
         viewportFraction: 1,
         enableInfiniteScroll: true,
         autoPlay: true,

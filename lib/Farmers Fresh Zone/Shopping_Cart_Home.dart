@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names
 
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/Blogs_List_Builder.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/Category_grid.dart';
@@ -24,7 +24,14 @@ class ShoppingCart extends StatelessWidget {
     'PACKED FLACOURS',
     'GOURMETS SALADS'
   ];
+
   List topCarouselItemsList = [
+    'assets/shopping cart/main.jpg',
+    'assets/shopping cart/main3.jpg',
+    'assets/shopping cart/main4.jpg',
+    'assets/shopping cart/main5.jpg',
+  ];
+  List categoryImageList = [
     'https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     'https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600',
     'https://images.pexels.com/photos/1196516/pexels-photo-1196516.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -34,16 +41,7 @@ class ShoppingCart extends StatelessWidget {
     'https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&w=600',
     'https://images.pexels.com/photos/1101249/pexels-photo-1101249.jpeg?auto=compress&cs=tinysrgb&w=600'
   ];
-  List BottomCarouselItemsList = [
-    'https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/1196516/pexels-photo-1196516.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/196643/pexels-photo-196643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'https://images.pexels.com/photos/594137/pexels-photo-594137.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/35625/vegetables-fresh-veggies-food.jpg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/1101249/pexels-photo-1101249.jpeg?auto=compress&cs=tinysrgb&w=600'
-  ];
+
   List StoreItems = [
     {
       'Image':
@@ -96,7 +94,7 @@ class ShoppingCart extends StatelessWidget {
                       )),
                 ),
                 StoreCategoryCardGrid(
-                    CarouselItemsList: topCarouselItemsList, chips: chips),
+                    CarouselItemsList: categoryImageList, chips: chips),
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   decoration: const BoxDecoration(
@@ -104,7 +102,7 @@ class ShoppingCart extends StatelessWidget {
                           horizontal:
                               BorderSide(width: 3, color: Color(0xffcde0d5)))),
                   child: CarouselImageSlider(
-                      CarouselItemsList: BottomCarouselItemsList),
+                      CarouselItemsList: topCarouselItemsList),
                 ),
                 Padding(
                   padding:
