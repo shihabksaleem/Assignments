@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:assignment_ui/Expansion%20sample/Expansion_sample.dart';
+import 'package:assignment_ui/Expansion_Tile_card_ui/Expansion_tile_card.dart';
 import 'package:assignment_ui/WhatsappUi/screens/TabHomeScreen.dart';
 import 'package:assignment_ui/ContactBook_ui/ContactUiSplash.dart';
 import 'package:assignment_ui/Hotel%20app/HotelAppHome.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ShoppingCart(),
+      home: ExpansionTileCardSample(),
     );
   }
 }

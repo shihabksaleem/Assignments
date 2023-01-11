@@ -43,7 +43,10 @@ class StoreItemGrid extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Text('₹${StoreItems[index]['Rate']}'),
+              Text(
+                '₹${StoreItems[index]['Rate']}',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               const SizedBox(
                 height: 5,
               ),

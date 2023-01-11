@@ -30,6 +30,10 @@ class ShoppingCart extends StatelessWidget {
     'assets/shopping cart/main4.jpg',
     'assets/shopping cart/main5.jpg',
   ];
+  List bottomCarouselItemsList = [
+    'assets/shopping cart/banner.jpg',
+    'assets/shopping cart/banner2.jpg',
+  ];
   List categoryImageList = [
     'https://res.cloudinary.com/farmersfreshzone/image/upload/v1638787119/Product/jghu86qgjdtnsvlyvnkl.jpg',
     'https://res.cloudinary.com/farmersfreshzone/image/upload/c_scale,h_250,w_250/c_scale,w_2081/v1598435631/Product/ujnkolanbenh0c9yfmq9.jpg',
@@ -77,7 +81,7 @@ class ShoppingCart extends StatelessWidget {
             delegate: SliverChildListDelegate(
               [
                 ChipsContainer(chips: chips),
-                CarouselImageSlider(CarouselItemsList: topCarouselItemsList),
+                CarouselImageSlider(carouselItemsList: topCarouselItemsList),
                 const TopIconCardContainer(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -97,7 +101,7 @@ class ShoppingCart extends StatelessWidget {
                           horizontal:
                               BorderSide(width: 3, color: Color(0xffcde0d5)))),
                   child: CarouselImageSlider(
-                      CarouselItemsList: topCarouselItemsList),
+                      carouselItemsList: bottomCarouselItemsList),
                 ),
                 Padding(
                   padding:

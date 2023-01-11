@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 class CarouselImageSlider extends StatelessWidget {
   const CarouselImageSlider({
-    required this.CarouselItemsList,
+    required this.carouselItemsList,
   });
 
-  final List CarouselItemsList;
+  final List carouselItemsList;
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,10 @@ class CarouselImageSlider extends StatelessWidget {
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(
-          CarouselItemsList[index],
+          carouselItemsList[index],
         ))),
       ),
-      itemCount: CarouselItemsList.length,
+      itemCount: carouselItemsList.length,
       options: CarouselOptions(
         pageSnapping: true,
         aspectRatio: 16 / 7,

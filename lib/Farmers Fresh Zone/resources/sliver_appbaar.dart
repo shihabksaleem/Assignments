@@ -18,9 +18,12 @@ class SliverAppbarContent extends StatelessWidget {
             Icon(Icons.location_on_outlined),
             Text(
               'KOCHI',
-              style: TextStyle(fontWeight: FontWeight.w500),
+              style: TextStyle(fontWeight: FontWeight.w400),
             ),
-            Icon(Icons.arrow_drop_down)
+            Padding(
+              padding: EdgeInsets.only(right: 15),
+              child: Icon(Icons.arrow_drop_down),
+            )
           ],
         )
       ],
@@ -30,7 +33,7 @@ class SliverAppbarContent extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: const [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               child: TextField(
                 decoration: InputDecoration(
 
