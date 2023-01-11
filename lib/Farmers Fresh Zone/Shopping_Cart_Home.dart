@@ -6,7 +6,6 @@ import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/Store_Item_Grid.d
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/carousel_image_slider.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/certified_badge_container.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/chips_Contaner.dart';
-import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/customer_reviews_container.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/review_corrousel.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/sliver_appbaar.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/top_icon_card.dart';
@@ -32,41 +31,37 @@ class ShoppingCart extends StatelessWidget {
     'assets/shopping cart/main5.jpg',
   ];
   List categoryImageList = [
-    'https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/1196516/pexels-photo-1196516.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/196643/pexels-photo-196643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'https://images.pexels.com/photos/594137/pexels-photo-594137.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/35625/vegetables-fresh-veggies-food.jpg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/1101249/pexels-photo-1101249.jpeg?auto=compress&cs=tinysrgb&w=600'
+    'https://res.cloudinary.com/farmersfreshzone/image/upload/v1638787119/Product/jghu86qgjdtnsvlyvnkl.jpg',
+    'https://res.cloudinary.com/farmersfreshzone/image/upload/c_scale,h_250,w_250/c_scale,w_2081/v1598435631/Product/ujnkolanbenh0c9yfmq9.jpg',
+    'https://res.cloudinary.com/farmersfreshzone/image/upload/c_scale,h_250,w_250/c_scale,w_2081/v1598435765/Product/tssgwn0eeejipf8mhfd2.jpg',
+    'https://res.cloudinary.com/farmersfreshzone/image/upload/t_media_thumb/v1647846649/product/szrvdnx1hccgow8ik5if.jpg',
+    'https://res.cloudinary.com/farmersfreshzone/image/upload/t_media_thumb/v1647933526/product/t4fr66dtajglazzhffia.jpg',
+    'https://res.cloudinary.com/farmersfreshzone/image/upload/t_media_thumb/v1647933525/product/kayzgbtyrzup3uiiflhu.jpg',
+    'https://res.cloudinary.com/farmersfreshzone/image/upload/c_limit,h_250,w_250/v1647933527/product/zvdh4kjocprnhr7zm2di.jpg',
+    'https://res.cloudinary.com/farmersfreshzone/image/upload/v1656304012/product/na8yccnwj6ekyce8b5z8.jpg'
   ];
 
   List StoreItems = [
     {
-      'Image':
-          'https://img.freepik.com/premium-vector/carrot-image-ripe-carrot-vitamin-vegetable-organic-food-orange-carrots-vector-illustration-isolated-white-background_538993-719.jpg?size=338&ext=jpg&uid=R89487700&ga=GA1.1.862767236.1673153802&semt=sph',
+      'Image': 'https://www.farmersfz.com/assets/public/vegimg/CART8.jpg',
       'Name': 'Carrot',
       'Rate': '34',
       'Qty': '0.05kg',
     },
     {
-      'Image':
-          'https://img.freepik.com/free-photo/bananas_1339-1187.jpg?size=626&ext=jpg&uid=R89487700&ga=GA1.1.862767236.1673153802&semt=sph',
+      'Image': 'https://www.farmersfz.com/assets/public/vegimg/BNAN6.jpg',
       'Name': 'Banana',
       'Rate': '34.5',
       'Qty': '0.05kg',
     },
     {
-      'Image':
-          'https://img.freepik.com/free-photo/fresh-broccoli-isolated_144627-30009.jpg?size=626&ext=jpg&uid=R89487700&ga=GA1.1.862767236.1673153802&semt=sph',
-      'Name': 'Brocoli Florets',
+      'Image': 'https://www.farmersfz.com/assets/public/vegimg/Brc.jpg',
+      'Name': ' Broccoli Florets 200gm',
       'Rate': '99',
       'Qty': '1.00 NOS',
     },
     {
-      'Image':
-          'https://img.freepik.com/free-photo/delicious-potatoes-white-background_1203-1899.jpg?size=626&ext=jpg&uid=R89487700&ga=GA1.1.862767236.1673153802&semt=sph',
+      'Image': 'https://www.farmersfz.com/assets/public/vegimg/PTTO8.jpg',
       'Name': 'potato',
       'Rate': '23',
       'Qty': '0.05kg',
