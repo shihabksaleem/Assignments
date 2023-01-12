@@ -25,7 +25,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ExpansionTileCardSample(),
+      initialRoute: ExpansionTileCardSample.id,
+      routes: {
+        ExpansionTileCardSample.id: (context) => ExpansionTileCardSample()
+      },
     );
   }
 }
