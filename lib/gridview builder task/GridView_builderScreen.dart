@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 class GridviewBuilderScreen extends StatelessWidget {
+  static String id = 'GridviewBuilder_Screen';
   @override
   Widget build(BuildContext context) {
     List cardContent = [

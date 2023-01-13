@@ -4,8 +4,9 @@ import 'package:assignment_ui/hotel_details_page_ui/bototm_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class HotelsPage1 extends StatelessWidget {
-  const HotelsPage1({super.key});
+class HotelsDetailsPage extends StatelessWidget {
+  static String id = 'HotelsDetailsPage';
+  const HotelsDetailsPage({super.key});
 
   @override
   Widget build(BuildContext context) {

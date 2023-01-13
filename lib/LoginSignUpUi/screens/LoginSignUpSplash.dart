@@ -8,6 +8,7 @@ import 'package:assignment_ui/LoginSignUpUi/screens/LoginSignUpScreen.dart';
 import 'package:flutter/material.dart';
 
 class LoginSignUpSplash extends StatefulWidget {
+  static String id = 'LoginSignUpSplash';
   const LoginSignUpSplash({super.key});
 
   @override

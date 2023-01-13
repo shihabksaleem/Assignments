@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GridViewStackScreen extends StatelessWidget {
+  static String id = 'GridView_StackScreen';
   List contentList = [
     [
       'https://images.pexels.com/photos/2422588/pexels-photo-2422588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',

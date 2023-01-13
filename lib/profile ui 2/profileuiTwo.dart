@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProfileUiTwoHome extends StatelessWidget {
+  static String id = 'ProfileUiTwoHome';
   const ProfileUiTwoHome({super.key});
 
   @override

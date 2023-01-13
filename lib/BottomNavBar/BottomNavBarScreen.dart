@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 class BottomNavSampleScreen extends StatefulWidget {
+  static String id = 'Bottom_Nav_Sample_Screen';
   const BottomNavSampleScreen({super.key});
 
   @override

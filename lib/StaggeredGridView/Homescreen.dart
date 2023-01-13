@@ -4,6 +4,7 @@ import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
 class StaggeredGridViewScreen extends StatelessWidget {
+  static String id = 'Staggered_GridView_Screen';
   @override
   Widget build(BuildContext context) {
     List imagesList = [

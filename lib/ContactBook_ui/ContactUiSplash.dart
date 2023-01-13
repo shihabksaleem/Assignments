@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class ContactUiSplash extends StatefulWidget {
+  static String id = 'Contact_UiSplash';
   @override
   State<ContactUiSplash> createState() => _ContactUiSplashState();
 }

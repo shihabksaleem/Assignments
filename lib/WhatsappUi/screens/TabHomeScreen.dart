@@ -1,11 +1,12 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names
 
-import 'package:assignment_ui/WhatsappUi/chatScreen.dart';
+import 'package:assignment_ui/WhatsappUi/screens/chatScreen.dart';
 import 'package:assignment_ui/WhatsappUi/screens/CallsScreen.dart';
 import 'package:assignment_ui/WhatsappUi/screens/StatusScreen.dart';
 import 'package:flutter/material.dart';
 
-class MyTab extends StatelessWidget {
+class CommunityTab extends StatelessWidget {
+  static String id = 'Whatsapp_Ui_Clone_Home_Page';
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 class ProfileUiStackScreen extends StatelessWidget {
+  static String id = 'Profile_Ui_StackScreen';
   const ProfileUiStackScreen({super.key});
 
   @override

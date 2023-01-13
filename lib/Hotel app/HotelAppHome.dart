@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class ScreenHotelApp extends StatelessWidget {
+  static String id = 'ScreenHotelApp';
   @override
   Widget build(BuildContext context) {
     List dataList = [

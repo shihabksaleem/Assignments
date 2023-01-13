@@ -12,7 +12,8 @@ import 'package:assignment_ui/Farmers%20Fresh%20Zone/resources/top_icon_card.dar
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class ShoppingCart extends StatelessWidget {
+class FarmersFreshZone extends StatelessWidget {
+  static String id = 'Shopping_Cart';
   List chips = [
     'OFFERS',
     'VEGETABLES',
