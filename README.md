@@ -10,3 +10,8 @@ Repository showcasing different UI examples using Flutter.
 | Splash Screen | Welcome Screen | Login Screen | Sign up Screen |
 |----------|----------|----------|----------|
 | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/Splash.jpg?raw=true)   | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/Welcome%20page.jpg?raw=true)   | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/login%20page.jpg?raw=true)   | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/signup%20page.jpg?raw=true)   |
+
+### Sample ui for Login and SignUp
+| Splash Screen | Welcome Screen | Login Screen | Sign up Screen |
+|----------|----------|----------|----------|
+| ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/Splash.jpg?raw=true)   | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/Welcome%20page.jpg?raw=true)   | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/login%20page.jpg?raw=true)   | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/signup%20page.jpg?raw=true)   |
