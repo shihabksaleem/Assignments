@@ -18,6 +18,7 @@ import 'package:assignment_ui/profile%20ui%202/profileuiTwo.dart';
 import 'package:assignment_ui/profile%20ui%20stack%20task/profile_ui_stack.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/Shopping_Cart_Home.dart';
 import 'package:assignment_ui/tourism_app/screens/home_screen/tourism_home_screen.dart';
+import 'package:assignment_ui/tourism_gofast_app/screens/login_screen/gofast_login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -25,11 +26,13 @@ void main(List<String> args) {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: TourismAppUi.id,
+      initialRoute: gofast_loginpage.id,
       routes: {
         //BottomNavBar
         BottomNavSampleScreen.id: (context) => BottomNavSampleScreen(),
@@ -63,6 +66,8 @@ class MyApp extends StatelessWidget {
         StaggeredGridViewScreen.id: (context) => StaggeredGridViewScreen(),
         // Tourism_App_Ui
         TourismAppUi.id: (context) => TourismAppUi(),
+        // Tourism_Gofast_App
+        gofast_loginpage.id: (context) => gofast_loginpage(),
         // Whatsapp UI
         CommunityTab.id: (context) => CommunityTab(),
       },
