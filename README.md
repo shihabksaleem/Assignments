@@ -11,4 +11,4 @@ Repository showcasing different UI examples using Flutter.
 |----------|----------|----------|----------|
 | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/Splash.jpg?raw=true)   | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/Welcome%20page.jpg?raw=true)   | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/login%20page.jpg?raw=true)   | ![lOGIN](https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/Login%20Sign-up%20ui/signup%20page.jpg?raw=true)   |
 
-<img align="right" alt="Coding" width="400" src="https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/contactbook%20ui/SPLASH.jpg?raw=true">
+<!-- <img align="right" alt="Coding" width="400" src="https://user-images.githubusercontent.com/75658401/212917963-0adeea16-16c8-4803-bd13-ce9b8c548e34.jpg"> -->
