@@ -17,6 +17,7 @@ import 'package:assignment_ui/hotel_details_page_ui/screen1.dart';
 import 'package:assignment_ui/profile%20ui%202/profileuiTwo.dart';
 import 'package:assignment_ui/profile%20ui%20stack%20task/profile_ui_stack.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/Shopping_Cart_Home.dart';
+import 'package:assignment_ui/tourism_app/screens/home_screen/tourism_home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: dataTableSample.id,
+      initialRoute: TourismAppUi.id,
       routes: {
         //BottomNavBar
         BottomNavSampleScreen.id: (context) => BottomNavSampleScreen(),
@@ -60,6 +61,8 @@ class MyApp extends StatelessWidget {
         ProfileUiStackScreen.id: (context) => ProfileUiStackScreen(),
         // StaggeredGridView
         StaggeredGridViewScreen.id: (context) => StaggeredGridViewScreen(),
+        // Tourism_App_Ui
+        TourismAppUi.id: (context) => TourismAppUi(),
         // Whatsapp UI
         CommunityTab.id: (context) => CommunityTab(),
       },
