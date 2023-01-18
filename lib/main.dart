@@ -14,6 +14,7 @@ import 'package:assignment_ui/StaggeredGridView/Homescreen.dart';
 import 'package:assignment_ui/data%20Table/dataTable.dart';
 import 'package:assignment_ui/gridview%20builder%20task/GridView_builderScreen.dart';
 import 'package:assignment_ui/hotel_details_page_ui/screen1.dart';
+import 'package:assignment_ui/music_app_ui/screens/main_screen/music_app_main.dart';
 import 'package:assignment_ui/profile%20ui%202/profileuiTwo.dart';
 import 'package:assignment_ui/profile%20ui%20stack%20task/profile_ui_stack.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/Shopping_Cart_Home.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: gofast_loginpage.id,
+      initialRoute: MusicAppMianScreen.id,
       routes: {
         //BottomNavBar
         BottomNavSampleScreen.id: (context) => BottomNavSampleScreen(),
@@ -58,6 +59,8 @@ class MyApp extends StatelessWidget {
         HotelsDetailsPage.id: (context) => HotelsDetailsPage(),
         // LoginSignUpUi
         LoginSignUpSplash.id: (context) => LoginSignUpSplash(),
+        // Music_App_Home_Screen
+        MusicAppMianScreen.id: (context) => MusicAppMianScreen(),
         // profile ui 2
         ProfileUiTwoHome.id: (context) => ProfileUiTwoHome(),
         // profile ui stack task
