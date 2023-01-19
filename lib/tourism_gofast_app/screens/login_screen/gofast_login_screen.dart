@@ -2,7 +2,7 @@ import 'package:assignment_ui/tourism_gofast_app/screens/home_screen/gofast_home
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class gofast_loginpage extends StatelessWidget {
+class GofastLoginPage extends StatelessWidget {
   static String id = 'gofast_loginpage';
   @override
   Widget build(BuildContext context) {

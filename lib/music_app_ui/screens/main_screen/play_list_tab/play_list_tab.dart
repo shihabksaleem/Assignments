@@ -12,7 +12,7 @@ class PlayListTab extends StatelessWidget {
           padding: const EdgeInsets.all(15),
           child: TextField(
             decoration: InputDecoration(
-                contentPadding: EdgeInsets.only(left: 15),
+                contentPadding: const EdgeInsets.only(left: 15),
                 hintText: 'Search...',
                 hintStyle: const TextStyle(color: Color(0xfff5b5c5)),
                 suffixIcon: const Icon(Icons.search),

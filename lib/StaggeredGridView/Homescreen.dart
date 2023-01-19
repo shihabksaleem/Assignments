@@ -66,29 +66,30 @@ class StaggeredGridViewScreen extends StatelessWidget {
     ];
     return SafeArea(
       child: Scaffold(
-          appBar: AppBar(
-            centerTitle: true,
-            title: Text(
-              'Staggered List Tile',
-              style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-            ),
-            backgroundColor: Colors.grey.shade400,
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text(
+            'Staggered List Tile',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
           backgroundColor: Colors.grey.shade400,
-          body: StaggeredGridView.countBuilder(
-              padding: EdgeInsets.all(15),
-              staggeredTileBuilder: (index) =>
-                  StaggeredTile.count(2, index.isEven ? 3 : 4),
-              crossAxisCount: 4,
-              itemCount: imagesList.length,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10,
-              itemBuilder: (context, index) => reusableConatainers(
-                    image: imagesList[index][0],
-                    text: imagesList[index][1],
-                    subTitle: imagesList[index][2],
-                  ))),
+        ),
+        backgroundColor: Colors.grey.shade400,
+        body: StaggeredGridView.countBuilder(
+          padding: EdgeInsets.all(15),
+          staggeredTileBuilder: (index) =>
+              StaggeredTile.count(2, index.isEven ? 3 : 4),
+          crossAxisCount: 4,
+          itemCount: imagesList.length,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
+          itemBuilder: (context, index) => reusableConatainers(
+            image: imagesList[index][0],
+            text: imagesList[index][1],
+            subTitle: imagesList[index][2],
+          ),
+        ),
+      ),
     );
   }
 }

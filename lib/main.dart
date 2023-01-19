@@ -14,6 +14,7 @@ import 'package:assignment_ui/StaggeredGridView/Homescreen.dart';
 import 'package:assignment_ui/data%20Table/dataTable.dart';
 import 'package:assignment_ui/gridview%20builder%20task/GridView_builderScreen.dart';
 import 'package:assignment_ui/hotel_details_page_ui/screen1.dart';
+import 'package:assignment_ui/invoice_app-ui/screens/first_screeen/invoice_first_screen.dart';
 import 'package:assignment_ui/music_app_ui/screens/main_screen/music_app_main.dart';
 import 'package:assignment_ui/profile%20ui%202/profileuiTwo.dart';
 import 'package:assignment_ui/profile%20ui%20stack%20task/profile_ui_stack.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: MusicAppMianScreen.id,
+      initialRoute: InvoiceFirstScreen.id,
       routes: {
         //BottomNavBar
         BottomNavSampleScreen.id: (context) => BottomNavSampleScreen(),
@@ -57,6 +58,8 @@ class MyApp extends StatelessWidget {
         ScreenHotelApp.id: (context) => ScreenHotelApp(),
         // hotel_details_page_ui
         HotelsDetailsPage.id: (context) => HotelsDetailsPage(),
+        // Invoice_First_Screen
+        InvoiceFirstScreen.id: (context) => InvoiceFirstScreen(),
         // LoginSignUpUi
         LoginSignUpSplash.id: (context) => LoginSignUpSplash(),
         // Music_App_Home_Screen
@@ -70,7 +73,7 @@ class MyApp extends StatelessWidget {
         // Tourism_App_Ui
         TourismAppUi.id: (context) => TourismAppUi(),
         // Tourism_Gofast_App
-        gofast_loginpage.id: (context) => gofast_loginpage(),
+        GofastLoginPage.id: (context) => GofastLoginPage(),
         // Whatsapp UI
         CommunityTab.id: (context) => CommunityTab(),
       },
