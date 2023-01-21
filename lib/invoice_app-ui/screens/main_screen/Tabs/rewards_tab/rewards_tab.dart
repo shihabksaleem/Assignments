@@ -29,7 +29,7 @@ class RewardsTab extends StatelessWidget {
             padding: EdgeInsets.all(15),
             itemCount: 15,
             itemBuilder: (context, index) => RewardsTile(),
-            separatorBuilder: (context, index) => SizedBox(
+            separatorBuilder: (context, index) => const SizedBox(
               height: 10,
             ),
           ),

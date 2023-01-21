@@ -19,6 +19,7 @@ import 'package:assignment_ui/music_app_ui/screens/main_screen/music_app_main.da
 import 'package:assignment_ui/profile%20ui%202/profileuiTwo.dart';
 import 'package:assignment_ui/profile%20ui%20stack%20task/profile_ui_stack.dart';
 import 'package:assignment_ui/Farmers%20Fresh%20Zone/Shopping_Cart_Home.dart';
+import 'package:assignment_ui/routes_page.dart';
 import 'package:assignment_ui/tourism_app/screens/home_screen/tourism_home_screen.dart';
 import 'package:assignment_ui/tourism_gofast_app/screens/login_screen/gofast_login_screen.dart';
 import 'package:flutter/material.dart';
@@ -34,8 +35,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: InvoiceFirstScreen.id,
+      initialRoute: RoutesPage.id,
       routes: {
+        RoutesPage.id: (context) => RoutesPage(),
         //BottomNavBar
         BottomNavSampleScreen.id: (context) => BottomNavSampleScreen(),
         // ContactBook_ui

@@ -1,144 +1,74 @@
-import 'package:assignment_ui/invoice_app-ui/screens/main_screen/balance_top_container/balance_top_container.dart';
+// ignore_for_file: non_constant_identifier_names
 
-import 'package:assignment_ui/invoice_app-ui/screens/main_screen/Tabs/rewards_tab/rewards_tab.dart';
+import 'package:assignment_ui/invoice_app-ui/screens/main_screen/botttom_tabs/profile_bottom_tab.dart';
+import 'package:assignment_ui/invoice_app-ui/screens/main_screen/botttom_tabs/rewards_bottom_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class InvoiceMainScreen extends StatelessWidget {
-  const InvoiceMainScreen({super.key});
+class InvoiceMainScreen extends StatefulWidget {
+  @override
+  State<InvoiceMainScreen> createState() => _InvoiceMainScreenState();
+}
 
+class _InvoiceMainScreenState extends State<InvoiceMainScreen> {
+  int selectedIndex = 2;
+
+  List<Widget> BottomTabList = [
+    Center(
+      child: Image.asset('assets/images/invoice/invoicebg.png'),
+    ),
+    Center(
+      child: Image.asset('assets/images/invoice/invoicebg.png'),
+    ),
+    const RewardsBottomTab(),
+    const ProfileBottomTab(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color(0xffecddd6),
-                Color(0xffe0e2f1),
-                Color(0xffebf0f4),
-                Color(0xffe0e2f1),
-                Color(0xffecddd6),
+        body: BottomTabList[selectedIndex],
+        bottomNavigationBar: Container(
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(30), topLeft: Radius.circular(30)),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.black38, spreadRadius: 0, blurRadius: 5),
               ],
             ),
-          ),
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 15, top: 15),
-                child: Row(
-                  children: [
-                    IconButton(
-                      padding:
-                          const EdgeInsets.only(left: 5, top: 2.5, bottom: 2.5),
-                      constraints: const BoxConstraints(),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      icon: const Icon(
-                        Icons.arrow_back_ios,
+            child: ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(30.0),
+                topRight: Radius.circular(30.0),
+              ),
+              child: BottomNavigationBar(
+                onTap: (value) {
+                  setState(() {
+                    selectedIndex = value;
+                  });
+                },
+                type: BottomNavigationBarType.fixed,
+                currentIndex: selectedIndex,
+                selectedIconTheme: const IconThemeData(color: Colors.blue),
+                unselectedIconTheme: const IconThemeData(color: Colors.grey),
+                items: const <BottomNavigationBarItem>[
+                  BottomNavigationBarItem(
+                      icon: Icon(
+                        Icons.home,
+                      ),
+                      label: ''),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.widgets_rounded), label: ''),
+                  BottomNavigationBarItem(
+                      icon: FaIcon(
+                        FontAwesomeIcons.gift,
                         size: 20,
-                        color: Color(0xff4f86dc),
                       ),
-                    ),
-                    const Text(
-                      'Rewards Wallet',
-                      style: TextStyle(
-                          color: Color(0xff4f86dc),
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
+                      label: ''),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.account_circle_outlined), label: '')
+                ],
               ),
-              const SizedBox(height: 15),
-              BalanceTopContainer(),
-              Expanded(
-                child: DefaultTabController(
-                  length: 2,
-                  child: Column(
-                    children: [
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: Color(0xffe7e4eb),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black26,
-                              offset: Offset(0, 2),
-                              blurRadius: 10,
-                              spreadRadius: -3,
-                            ),
-                            BoxShadow(
-                              color: Colors.black26,
-                              offset: Offset(0, -2),
-                              blurRadius: 10,
-                              spreadRadius: -3,
-                            ),
-                          ],
-                        ),
-                        child: TabBar(
-                          indicator: const BoxDecoration(
-                            border: Border(
-                              bottom: BorderSide(
-                                color: Color(0xff3834a3),
-                                width: 3,
-                              ),
-                            ),
-                            color: Colors.white,
-                          ),
-                          labelColor: Color(0xff3834a3),
-                          unselectedLabelColor: Colors.grey,
-                          overlayColor:
-                              MaterialStateProperty.all<Color?>(Colors.red),
-                          indicatorColor: const Color(0xff4080e6),
-                          tabs: [
-                            Tab(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: const [
-                                  FaIcon(
-                                    FontAwesomeIcons.gift,
-                                    size: 15,
-                                  ),
-                                  SizedBox(width: 10),
-                                  Text('Rewards')
-                                ],
-                              ),
-                            ),
-                            Tab(
-                              child: Row(
-                                children: const [
-                                  Icon(
-                                    Icons.local_atm,
-                                    size: 20,
-                                  ),
-                                  SizedBox(width: 10),
-                                  Text('Transactions')
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: TabBarView(children: [
-                          RewardsTab(),
-                          Container(
-                            color: Colors.red,
-                          )
-                        ]),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+            )));
   }
 }

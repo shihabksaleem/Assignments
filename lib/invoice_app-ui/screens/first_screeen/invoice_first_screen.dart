@@ -82,7 +82,6 @@ class _InvoiceFirstScreenState extends State<InvoiceFirstScreen> {
                           width: MediaQuery.of(context).size.width * .4,
                           height: 45,
                           child: CustomButton(
-                            color: Color(0xff4f86dc),
                             icon: _isFirst
                                 ? Icons.arrow_back_ios
                                 : Icons.check_circle_outline_outlined,
