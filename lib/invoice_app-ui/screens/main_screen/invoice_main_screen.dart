@@ -21,54 +21,45 @@ class _InvoiceMainScreenState extends State<InvoiceMainScreen> {
       child: Image.asset('assets/images/invoice/invoicebg.png'),
     ),
     const RewardsBottomTab(),
-    const ProfileBottomTab(),
+    ProfileBottomTab(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: BottomTabList[selectedIndex],
-        bottomNavigationBar: Container(
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(30), topLeft: Radius.circular(30)),
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.black38, spreadRadius: 0, blurRadius: 5),
-              ],
-            ),
-            child: ClipRRect(
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(30.0),
-                topRight: Radius.circular(30.0),
-              ),
-              child: BottomNavigationBar(
-                onTap: (value) {
-                  setState(() {
-                    selectedIndex = value;
-                  });
-                },
-                type: BottomNavigationBarType.fixed,
-                currentIndex: selectedIndex,
-                selectedIconTheme: const IconThemeData(color: Colors.blue),
-                unselectedIconTheme: const IconThemeData(color: Colors.grey),
-                items: const <BottomNavigationBarItem>[
-                  BottomNavigationBarItem(
-                      icon: Icon(
-                        Icons.home,
-                      ),
-                      label: ''),
-                  BottomNavigationBarItem(
-                      icon: Icon(Icons.widgets_rounded), label: ''),
-                  BottomNavigationBarItem(
-                      icon: FaIcon(
-                        FontAwesomeIcons.gift,
-                        size: 20,
-                      ),
-                      label: ''),
-                  BottomNavigationBarItem(
-                      icon: Icon(Icons.account_circle_outlined), label: '')
-                ],
-              ),
-            )));
+        bottomNavigationBar: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(30.0),
+            topRight: Radius.circular(30.0),
+          ),
+          child: BottomNavigationBar(
+            onTap: (value) {
+              setState(() {
+                selectedIndex = value;
+              });
+            },
+            type: BottomNavigationBarType.fixed,
+            currentIndex: selectedIndex,
+            selectedIconTheme: const IconThemeData(color: Colors.blue),
+            unselectedIconTheme: const IconThemeData(color: Colors.grey),
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.home,
+                  ),
+                  label: ''),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.widgets_rounded), label: ''),
+              BottomNavigationBarItem(
+                  icon: FaIcon(
+                    FontAwesomeIcons.gift,
+                    size: 20,
+                  ),
+                  label: ''),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.account_circle_outlined), label: '')
+            ],
+          ),
+        ));
   }
 }

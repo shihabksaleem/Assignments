@@ -1,8 +1,12 @@
-import 'package:assignment_ui/invoice_app-ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class ProfileBottomTab extends StatelessWidget {
-  const ProfileBottomTab({super.key});
+  List profileTileList = [
+    ['My Wallet', Icons.wallet],
+    ['Terms & Polocies', Icons.message_rounded],
+    ['About', Icons.info_outline_rounded],
+    ['Logout', Icons.logout],
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -139,30 +143,33 @@ class ProfileBottomTab extends StatelessWidget {
               ),
               Expanded(
                 child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: List.generate(
-                            4,
-                            (index) => Container(
-                                decoration: BoxDecoration(
-                                    boxShadow: const [
-                                      BoxShadow(
-                                          offset: Offset(-2, 2),
-                                          blurRadius: 2,
-                                          color:
-                                              Color.fromARGB(31, 177, 177, 177))
-                                    ],
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(color: Colors.white)),
-                                child: ListTile(
-                                  leading: Icon(
-                                    Icons.wallet,
-                                    color: Colors.blue.shade800,
-                                  ),
-                                  title: Text('My Wallet'),
-                                  trailing: Icon(Icons.arrow_forward_ios),
-                                ))))),
+                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: List.generate(
+                      4,
+                      (index) => Container(
+                        decoration: BoxDecoration(
+                            boxShadow: const [
+                              BoxShadow(
+                                  offset: Offset(-2, 2),
+                                  blurRadius: 2,
+                                  color: Color.fromARGB(31, 177, 177, 177))
+                            ],
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Colors.white)),
+                        child: ListTile(
+                          leading: Icon(
+                            profileTileList[index][1],
+                            color: Colors.blue.shade800,
+                          ),
+                          title: Text(profileTileList[index][0]),
+                          trailing: Icon(Icons.arrow_forward_ios),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
