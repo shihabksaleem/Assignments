@@ -1,12 +1,14 @@
 // ignore_for_file: avoid_print
 
-import 'package:assignment_ui/hotel_details_page_ui/bototm_sheet.dart';
+import 'package:assignment_ui/Hotel%20app/details_screen/bototm_sheet.dart';
+import 'package:assignment_ui/Hotel%20app/hotels_data_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class HotelsDetailsPage extends StatelessWidget {
-  static String id = 'HotelsDetailsPage';
-  const HotelsDetailsPage({super.key});
+  final int index;
+
+  const HotelsDetailsPage({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +21,10 @@ class HotelsDetailsPage extends StatelessWidget {
                 Container(
                     padding: EdgeInsets.all(15),
                     height: MediaQuery.of(context).size.height * .45,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: NetworkImage(
-                              'https://images.pexels.com/photos/1638341/pexels-photo-1638341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+                          image:
+                              NetworkImage(hotelsDataList[index]['imagePath']),
                           fit: BoxFit.cover),
                     ),
                     child: Align(
@@ -60,11 +62,13 @@ class HotelsDetailsPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Positioned(
+                Positioned(
                     bottom: 60,
                     left: 20,
                     child: Text(
-                      'Crown Plaza Kochi,\n Kerala',
+                      hotelsDataList[index]['Name'] +
+                          '\n' +
+                          hotelsDataList[index]['Place'],
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -83,7 +87,7 @@ class HotelsDetailsPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       RatingBar.builder(
-                        initialRating: 3,
+                        initialRating: hotelsDataList[index]['StarCount'],
                         minRating: 1,
                         direction: Axis.horizontal,
                         allowHalfRating: true,
@@ -148,7 +152,7 @@ class HotelsDetailsPage extends StatelessWidget {
                 ),
                 child: Text('Book Now'),
                 onPressed: () {
-                  showBotttomSheet(context);
+                  showBotttomSheet(context, index);
                 },
               ),
             ),
@@ -170,17 +174,6 @@ class HotelsDetailsPage extends StatelessWidget {
           )
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Colors.black,
-          type: BottomNavigationBarType.fixed,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.favorite_outline_outlined),
-                label: 'Favourites'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: 'Settings')
-          ]),
     );
   }
 }

@@ -8,12 +8,14 @@ class ProfileBottomTab extends StatelessWidget {
     ['Logout', Icons.logout],
   ];
 
+  ProfileBottomTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Account',
           style: TextStyle(color: Colors.grey),
         ),

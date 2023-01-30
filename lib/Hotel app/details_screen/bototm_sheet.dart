@@ -1,6 +1,7 @@
+import 'package:assignment_ui/Hotel%20app/hotels_data_list.dart';
 import 'package:flutter/material.dart';
 
-Future showBotttomSheet(BuildContext context) {
+Future showBotttomSheet(BuildContext context, int index) {
   return showModalBottomSheet(
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(
@@ -17,21 +18,21 @@ Future showBotttomSheet(BuildContext context) {
           children: [
             ListTile(
               leading: Container(
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: NetworkImage(
-                            'https://images.pexels.com/photos/1638341/pexels-photo-1638341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'))),
+                        image:
+                            NetworkImage(hotelsDataList[index]['imagePath']))),
                 height: 100,
                 width: 100,
               ),
-              title: const Text(
-                'Crown Plaza',
+              title: Text(
+                hotelsDataList[index]['Name'],
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
-              subtitle: Text('Kochi, Kerala'),
+              subtitle: Text(hotelsDataList[index]['Place']),
             ),
             const SizedBox(
               height: 10,
@@ -88,7 +89,7 @@ Future showBotttomSheet(BuildContext context) {
               ),
               child: Text('Book Now'),
               onPressed: () {
-                showBotttomSheet(context);
+                Navigator.pop(context);
               },
             ),
           ],

@@ -12,12 +12,12 @@ import 'Expansion sample/Expansion_sample.dart';
 import 'Expansion_Tile_card_ui/Expansion_tile_card.dart';
 import 'Farmers Fresh Zone/Shopping_Cart_Home.dart';
 import 'GridView_Stack task/grid_view_stack.dart';
-import 'Hotel app/HotelAppHome.dart';
+import 'Hotel app/home_screen/HotelAppHome.dart';
 import 'LoginSignUpUi/screens/LoginSignUpSplash.dart';
 import 'StaggeredGridView/Homescreen.dart';
 import 'WhatsappUi/screens/TabHomeScreen.dart';
 import 'gridview builder task/GridView_builderScreen.dart';
-import 'hotel_details_page_ui/screen1.dart';
+import 'Hotel app/details_screen/screen1.dart';
 import 'invoice_app-ui/screens/first_screeen/invoice_first_screen.dart';
 import 'music_app_ui/screens/main_screen/music_app_main.dart';
 
@@ -64,10 +64,10 @@ class RoutesPage extends StatelessWidget {
       'Routes': ScreenHotelApp.id,
       'Titles': 'ScreenHotelApp',
     },
-    {
-      'Routes': HotelsDetailsPage.id,
-      'Titles': 'HotelsDetailsPage',
-    },
+    // {
+    //   'Routes': HotelsDetailsPage.id,
+    //   'Titles': 'HotelsDetailsPage',
+    // },
     {
       'Routes': InvoiceFirstScreen.id,
       'Titles': 'InvoiceFirstScreen',

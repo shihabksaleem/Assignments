@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
+import 'package:assignment_ui/Hotel%20app/details_screen/screen1.dart';
+import 'package:assignment_ui/Hotel%20app/hotels_data_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -7,48 +9,6 @@ class ScreenHotelApp extends StatelessWidget {
   static String id = 'ScreenHotelApp';
   @override
   Widget build(BuildContext context) {
-    List dataList = [
-      {
-        'imagePath':
-            'https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=600',
-        'Name': 'Main Street Resort',
-        'Place': 'Kakanad',
-        'StarCount': 4.50,
-        'reviewCount': 20,
-      },
-      {
-        'imagePath':
-            'https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&w=600',
-        'Name': 'Ritz-Carlton Hotel',
-        'Place': 'Alleppey',
-        'StarCount': 4.5,
-        'reviewCount': 4000,
-      },
-      {
-        'imagePath':
-            'https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=600',
-        'Name': 'Marriott',
-        'Place': 'Munnar',
-        'StarCount': 3.3,
-        'reviewCount': 220,
-      },
-      {
-        'imagePath':
-            'https://images.pexels.com/photos/312029/pexels-photo-312029.jpeg?auto=compress&cs=tinysrgb&w=600',
-        'Name': 'The Luxury Collection Hotels',
-        'Place': 'Kumarakom',
-        'StarCount': 3.00,
-        'reviewCount': 220,
-      },
-      {
-        'imagePath':
-            'https://images.pexels.com/photos/776538/pexels-photo-776538.jpeg?auto=compress&cs=tinysrgb&w=600',
-        'Name': 'Rosewood Hotels & Resorts',
-        'Place': 'Kovalam',
-        'StarCount': 5.00,
-        'reviewCount': 500,
-      }
-    ];
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color.fromARGB(255, 245, 241, 241),
@@ -143,16 +103,36 @@ class ScreenHotelApp extends StatelessWidget {
             ),
             SliverList(
               delegate: SliverChildBuilderDelegate(
-                  (context, index) => roomCard(
-                      imagePath: dataList[index]['imagePath'],
-                      name: dataList[index]['Name'],
-                      place: dataList[index]['Place'],
-                      reviewCount: dataList[index]['reviewCount'],
-                      starCount: dataList[index]['StarCount']),
-                  childCount: dataList.length),
+                  (context, index) => GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    HotelsDetailsPage(index: index),
+                              ));
+                        },
+                        child: roomCard(
+                            imagePath: hotelsDataList[index]['imagePath'],
+                            name: hotelsDataList[index]['Name'],
+                            place: hotelsDataList[index]['Place'],
+                            reviewCount: hotelsDataList[index]['reviewCount'],
+                            starCount: hotelsDataList[index]['StarCount']),
+                      ),
+                  childCount: hotelsDataList.length),
             )
           ],
         ),
+        bottomNavigationBar: BottomNavigationBar(
+            selectedItemColor: Colors.black,
+            type: BottomNavigationBarType.fixed,
+            items: const [
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.search), label: 'Search'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.settings), label: 'Settings')
+            ]),
       ),
     );
   }
@@ -196,7 +176,7 @@ class ScreenHotelApp extends StatelessWidget {
                     padding: EdgeInsets.all(8),
                     color: Colors.white,
                     child: Text(
-                      "\$40",
+                      "\$200",
                       style: TextStyle(fontSize: 16),
                     ),
                   )
