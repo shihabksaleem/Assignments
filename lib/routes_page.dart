@@ -12,7 +12,7 @@ import 'Expansion sample/Expansion_sample.dart';
 import 'Expansion_Tile_card_ui/Expansion_tile_card.dart';
 import 'Farmers Fresh Zone/Shopping_Cart_Home.dart';
 import 'GridView_Stack task/grid_view_stack.dart';
-import 'Hotel app/home_screen/HotelAppHome.dart';
+import 'Hotel app/hotelsMainScreen/HotelAppHome.dart';
 import 'LoginSignUpUi/screens/LoginSignUpSplash.dart';
 import 'StaggeredGridView/Homescreen.dart';
 import 'WhatsappUi/screens/TabHomeScreen.dart';
@@ -61,7 +61,7 @@ class RoutesPage extends StatelessWidget {
       'Titles': 'GridViewStackScreen',
     },
     {
-      'Routes': ScreenHotelApp.id,
+      'Routes': HotelMainScreen.id,
       'Titles': 'ScreenHotelApp',
     },
     // {

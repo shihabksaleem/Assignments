@@ -7,7 +7,7 @@ import 'package:assignment_ui/Expansion_Tile_card_ui/Expansion_tile_card.dart';
 import 'package:assignment_ui/GridView_Stack%20task/grid_view_stack.dart';
 import 'package:assignment_ui/WhatsappUi/screens/TabHomeScreen.dart';
 import 'package:assignment_ui/ContactBook_ui/ContactUiSplash.dart';
-import 'package:assignment_ui/Hotel%20app/home_screen/HotelAppHome.dart';
+import 'package:assignment_ui/Hotel%20app/hotelsMainScreen/HotelAppHome.dart';
 import 'package:assignment_ui/ContactBook_ui/ContactBookHomeScreen.dart';
 import 'package:assignment_ui/LoginSignUpUi/screens/LoginSignUpSplash.dart';
 import 'package:assignment_ui/StaggeredGridView/Homescreen.dart';
@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
         // GridView_Stack task
         GridViewStackScreen.id: (context) => GridViewStackScreen(),
         // Hotel app
-        ScreenHotelApp.id: (context) => ScreenHotelApp(),
+        HotelMainScreen.id: (context) => HotelMainScreen(),
         // Invoice_First_Screen
         InvoiceFirstScreen.id: (context) => InvoiceFirstScreen(),
         // LoginSignUpUi

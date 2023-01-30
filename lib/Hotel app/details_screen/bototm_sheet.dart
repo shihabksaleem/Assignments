@@ -19,15 +19,18 @@ Future showBotttomSheet(BuildContext context, int index) {
             ListTile(
               leading: Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image:
-                            NetworkImage(hotelsDataList[index]['imagePath']))),
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      hotelsDataList[index]['imagePath'],
+                    ),
+                  ),
+                ),
                 height: 100,
                 width: 100,
               ),
               title: Text(
                 hotelsDataList[index]['Name'],
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
@@ -84,10 +87,10 @@ Future showBotttomSheet(BuildContext context, int index) {
               style: ButtonStyle(
                 backgroundColor:
                     MaterialStateProperty.all<Color>(Colors.purple),
-                padding: MaterialStateProperty.all(EdgeInsets.all(15)),
-                shape: MaterialStateProperty.all(StadiumBorder()),
+                padding: MaterialStateProperty.all(const EdgeInsets.all(15)),
+                shape: MaterialStateProperty.all(const StadiumBorder()),
               ),
-              child: Text('Book Now'),
+              child: const Text('Book Now'),
               onPressed: () {
                 Navigator.pop(context);
               },
