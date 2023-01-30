@@ -35,7 +35,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: HotelsDetailsPage(),
       initialRoute: RoutesPage.id,
       routes: {
         RoutesPage.id: (context) => RoutesPage(),
