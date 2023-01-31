@@ -11,6 +11,7 @@ import 'package:assignment_ui/Hotel%20app/hotelsMainScreen/HotelAppHome.dart';
 import 'package:assignment_ui/ContactBook_ui/ContactBookHomeScreen.dart';
 import 'package:assignment_ui/LoginSignUpUi/screens/LoginSignUpSplash.dart';
 import 'package:assignment_ui/StaggeredGridView/Homescreen.dart';
+import 'package:assignment_ui/banking_app/screens/home_screen/banking_home_screen.dart';
 import 'package:assignment_ui/data%20Table/dataTable.dart';
 import 'package:assignment_ui/gridview%20builder%20task/GridView_builderScreen.dart';
 import 'package:assignment_ui/Hotel%20app/details_screen/screen1.dart';
@@ -38,6 +39,8 @@ class MyApp extends StatelessWidget {
       initialRoute: RoutesPage.id,
       routes: {
         RoutesPage.id: (context) => RoutesPage(),
+        //BankingHomeScreen
+        BankingHomeScreen.id: (context) => BankingHomeScreen(),
         //BottomNavBar
         BottomNavSampleScreen.id: (context) => BottomNavSampleScreen(),
         // ContactBook_ui

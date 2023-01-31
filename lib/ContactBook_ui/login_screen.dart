@@ -8,8 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class ScreenLogin extends StatelessWidget {
-  final _formKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +24,6 @@ class ScreenLogin extends StatelessWidget {
                 Color(0xFF232633),
               ])),
           child: Form(
-            key: _formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,12 +57,6 @@ class ScreenLogin extends StatelessWidget {
                   height: 50,
                 ),
                 TextFormField(
-                  validator: (email) {
-                    if (!email!.contains('@') || email.isEmpty) {
-                      return 'Enter a vlid Email ';
-                    }
-                    return null;
-                  },
                   style: TextStyle(color: Colors.white70),
                   decoration: InputDecoration(
                       contentPadding:
@@ -85,12 +76,6 @@ class ScreenLogin extends StatelessWidget {
                 ),
                 TextFormField(
                   obscureText: true,
-                  validator: (pass) {
-                    if (pass!.length < 8 || pass.isEmpty) {
-                      return 'Invalid Password';
-                    }
-                    return null;
-                  },
                   style: TextStyle(color: Colors.white70),
                   decoration: InputDecoration(
                       contentPadding:
@@ -113,13 +98,11 @@ class ScreenLogin extends StatelessWidget {
                   children: [
                     TextButton(
                       onPressed: () {
-                        if (_formKey.currentState!.validate()) {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ContactUiHomeScreen(),
-                              ));
-                        }
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ContactUiHomeScreen(),
+                            ));
                       },
                       child: Row(
                         children: [

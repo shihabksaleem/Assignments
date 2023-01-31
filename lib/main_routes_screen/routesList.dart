@@ -7,6 +7,7 @@ import 'package:assignment_ui/Hotel%20app/hotelsMainScreen/HotelAppHome.dart';
 import 'package:assignment_ui/LoginSignUpUi/screens/LoginSignUpSplash.dart';
 import 'package:assignment_ui/StaggeredGridView/Homescreen.dart';
 import 'package:assignment_ui/WhatsappUi/screens/TabHomeScreen.dart';
+import 'package:assignment_ui/banking_app/screens/home_screen/banking_home_screen.dart';
 import 'package:assignment_ui/data%20Table/dataTable.dart';
 import 'package:assignment_ui/gridview%20builder%20task/GridView_builderScreen.dart';
 import 'package:assignment_ui/invoice_app-ui/screens/first_screeen/invoice_first_screen.dart';
@@ -20,117 +21,103 @@ import 'package:assignment_ui/ContactBook_ui/ContactUiSplash.dart';
 
 List uiList = [
   {
+    'Routes': BankingHomeScreen.id,
+    'Titles': 'Banking app sample Ui',
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
+  },
+  {
     'Routes': BottomNavSampleScreen.id,
     'Titles': 'Sample bottom nav bar',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': ContactUiSplash.id,
     'Titles': 'Contact book',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/contact_book.gif'
   },
   {
     'Routes': dataTableSample.id,
     'Titles': 'Sample Data table in flutter',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': DrawerTaskScreen.id,
     'Titles': 'Sample Drawer',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/app_drawer.gif'
   },
   {
     'Routes': ExpansionTileSample.id,
     'Titles': 'ExpansionTileSample',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/expansion_tile_with_lottie.gif'
   },
   {
     'Routes': ExpansionTileCardSample.id,
     'Titles': 'ExpansionTileCardSample',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': FarmersFreshZone.id,
     'Titles': 'FarmersFreshZone',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': GridviewBuilderScreen.id,
     'Titles': 'GridviewBuilderScreen',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': GridViewStackScreen.id,
     'Titles': 'GridViewStackScreen',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': HotelMainScreen.id,
     'Titles': 'ScreenHotelApp',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': InvoiceFirstScreen.id,
     'Titles': 'InvoiceFirstScreen',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': LoginSignUpSplash.id,
     'Titles': 'LoginSignUpSplash',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': MusicAppMianScreen.id,
     'Titles': 'MusicAppMianScreen',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': ProfileUiTwoHome.id,
     'Titles': 'ProfileUiTwoHome',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': ProfileUiStackScreen.id,
     'Titles': 'ProfileUiStackScreen',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': StaggeredGridViewScreen.id,
     'Titles': 'StaggeredGridViewScreen',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': TourismAppUi.id,
     'Titles': 'TourismAppUi',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': GofastLoginPage.id,
     'Titles': 'GofastLoginPage',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': CommunityTab.id,
     'Titles': 'Whatsapp Ui',
-    'Image':
-        'https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
 ];

@@ -27,7 +27,7 @@ class RoutesPage extends StatelessWidget {
       body: StaggeredGridView.countBuilder(
         padding: EdgeInsets.all(15),
         staggeredTileBuilder: (index) =>
-            StaggeredTile.count(2, index.isEven ? 3 : 4),
+            StaggeredTile.count(2, index.isEven ? 4 : 5),
         crossAxisCount: 4,
         itemCount: uiList.length,
         mainAxisSpacing: 10,

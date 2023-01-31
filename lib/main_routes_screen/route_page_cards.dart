@@ -20,8 +20,8 @@ class RoutePageCards extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20), topRight: Radius.circular(20)),
-              image: DecorationImage(
-                  image: NetworkImage(image), fit: BoxFit.cover)),
+              image:
+                  DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
         )),
         ListTile(
           contentPadding: EdgeInsets.all(10),
