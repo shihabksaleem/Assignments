@@ -1,3 +1,5 @@
+import 'package:assignment_ui/Hotel%20app/explore_hotels/res/widgets/popular_hotels_card.dart';
+import 'package:assignment_ui/Hotel%20app/hotels_data_list.dart';
 import 'package:flutter/material.dart';
 
 class PopularHotelsListView extends StatelessWidget {
@@ -9,20 +11,20 @@ class PopularHotelsListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: 100,
+        width: 180,
+        height: MediaQuery.of(context).size.height * .33,
         child: ListView.separated(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             // physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index) => Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.red,
+            itemBuilder: (context, index) => PopularHotelsCard(
+                  index: index,
                 ),
-            separatorBuilder: (context, index) => SizedBox(
+            separatorBuilder: (context, index) => const SizedBox(
                   width: 10,
                 ),
-            itemCount: 10),
+            itemCount: hotelsDataList.length),
       ),
     );
   }
