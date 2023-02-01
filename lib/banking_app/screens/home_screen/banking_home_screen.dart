@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 class BankingHomeScreen extends StatelessWidget {
   static String id = 'banking_home_screen';
-  const BankingHomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,14 +53,15 @@ class BankingHomeScreen extends StatelessWidget {
                   ),
                 ),
                 GridView.builder(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   itemCount: 6,
                   shrinkWrap: true,
-                  // physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
-                      mainAxisSpacing: 10,
-                      crossAxisSpacing: 10),
+                    crossAxisCount: 3,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                  ),
                   itemBuilder: (context, index) => IconCards(index: index),
                 ),
                 Padding(
@@ -77,7 +77,7 @@ class BankingHomeScreen extends StatelessWidget {
                         'LAST TRANSACTIONS',
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -85,39 +85,51 @@ class BankingHomeScreen extends StatelessWidget {
                     padding: const EdgeInsets.all(15),
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    itemBuilder: (context, index) => ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Container(
-                            color: Colors.white,
-                            child: Row(
-                              children: [
-                                Container(
-                                  width: 15,
-                                  height: 100,
-                                  color: Colors.red.shade900,
-                                ),
-                                SizedBox(width: 15),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
-                                    Text(
-                                      'CWDR/ \n974884/9874513365478965',
+                    itemBuilder: (context, index) => Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                        blurRadius: 10, offset: Offset(10, 10))
+                                  ]),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: 15,
+                                    height: 100,
+                                    color: Colors.red.shade900,
+                                  ),
+                                  const SizedBox(width: 15),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        'CWDR/ \n974884/9874513365478965',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 15),
+                                      ),
+                                      SizedBox(height: 10),
+                                      Text('10-06-2019')
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  const Padding(
+                                    padding: EdgeInsets.only(right: 10),
+                                    child: Text(
+                                      'INR. 10,000.00',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16),
+                                          fontSize: 14),
                                     ),
-                                    SizedBox(height: 10),
-                                    Text('10-06-2019')
-                                  ],
-                                ),
-                                Spacer(),
-                                Text(
-                                  'INR. 10,000.00',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14),
-                                )
-                              ],
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),

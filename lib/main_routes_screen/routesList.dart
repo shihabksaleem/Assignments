@@ -8,7 +8,6 @@ import 'package:assignment_ui/LoginSignUpUi/screens/LoginSignUpSplash.dart';
 import 'package:assignment_ui/StaggeredGridView/Homescreen.dart';
 import 'package:assignment_ui/WhatsappUi/screens/TabHomeScreen.dart';
 import 'package:assignment_ui/banking_app/screens/home_screen/banking_home_screen.dart';
-import 'package:assignment_ui/data%20Table/dataTable.dart';
 import 'package:assignment_ui/gridview%20builder%20task/GridView_builderScreen.dart';
 import 'package:assignment_ui/invoice_app-ui/screens/first_screeen/invoice_first_screen.dart';
 import 'package:assignment_ui/music_app_ui/screens/main_screen/music_app_main.dart';
@@ -16,29 +15,18 @@ import 'package:assignment_ui/profile%20ui%202/profileuiTwo.dart';
 import 'package:assignment_ui/profile%20ui%20stack%20task/profile_ui_stack.dart';
 import 'package:assignment_ui/tourism_app/screens/home_screen/tourism_home_screen.dart';
 import 'package:assignment_ui/tourism_gofast_app/screens/login_screen/gofast_login_screen.dart';
-import 'package:assignment_ui/BottomNavBar/BottomNavBarScreen.dart';
 import 'package:assignment_ui/ContactBook_ui/ContactUiSplash.dart';
 
 List uiList = [
   {
     'Routes': BankingHomeScreen.id,
     'Titles': 'Banking app sample Ui',
-    'Image': 'assets/routesAssets/hotel explore tab.gif'
-  },
-  {
-    'Routes': BottomNavSampleScreen.id,
-    'Titles': 'Sample bottom nav bar',
-    'Image': 'assets/routesAssets/hotel explore tab.gif'
+    'Image': 'assets/routesAssets/banking_app_gif.gif'
   },
   {
     'Routes': ContactUiSplash.id,
     'Titles': 'Contact book',
     'Image': 'assets/routesAssets/contact_book.gif'
-  },
-  {
-    'Routes': dataTableSample.id,
-    'Titles': 'Sample Data table in flutter',
-    'Image': 'assets/routesAssets/hotel explore tab.gif'
   },
   {
     'Routes': DrawerTaskScreen.id,

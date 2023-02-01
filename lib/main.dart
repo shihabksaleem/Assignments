@@ -1,6 +1,5 @@
 // ignore_for_file: unused_import, prefer_const_constructors
 
-import 'package:assignment_ui/BottomNavBar/BottomNavBarScreen.dart';
 import 'package:assignment_ui/Drawer%20Task/DrawerTaskScreen.dart';
 import 'package:assignment_ui/Expansion%20sample/Expansion_sample.dart';
 import 'package:assignment_ui/Expansion_Tile_card_ui/Expansion_tile_card.dart';
@@ -12,7 +11,6 @@ import 'package:assignment_ui/ContactBook_ui/ContactBookHomeScreen.dart';
 import 'package:assignment_ui/LoginSignUpUi/screens/LoginSignUpSplash.dart';
 import 'package:assignment_ui/StaggeredGridView/Homescreen.dart';
 import 'package:assignment_ui/banking_app/screens/home_screen/banking_home_screen.dart';
-import 'package:assignment_ui/data%20Table/dataTable.dart';
 import 'package:assignment_ui/gridview%20builder%20task/GridView_builderScreen.dart';
 import 'package:assignment_ui/Hotel%20app/details_screen/screen1.dart';
 import 'package:assignment_ui/invoice_app-ui/screens/first_screeen/invoice_first_screen.dart';
@@ -41,12 +39,10 @@ class MyApp extends StatelessWidget {
         RoutesPage.id: (context) => RoutesPage(),
         //BankingHomeScreen
         BankingHomeScreen.id: (context) => BankingHomeScreen(),
-        //BottomNavBar
-        BottomNavSampleScreen.id: (context) => BottomNavSampleScreen(),
+
         // ContactBook_ui
         ContactUiSplash.id: (context) => ContactUiSplash(),
-        // data Table
-        dataTableSample.id: (context) => dataTableSample(),
+
         // Drawer Task
         DrawerTaskScreen.id: (context) => DrawerTaskScreen(),
         // Expansion sample

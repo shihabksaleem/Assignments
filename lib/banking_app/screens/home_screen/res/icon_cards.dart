@@ -26,7 +26,7 @@ class IconCards extends StatelessWidget {
           Text(
             iconList[index][1],
             textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: const TextStyle(fontWeight: FontWeight.bold),
           ),
         ],
       ),
