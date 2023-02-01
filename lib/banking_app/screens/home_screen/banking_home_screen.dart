@@ -1,4 +1,5 @@
 import 'package:assignment_ui/banking_app/screens/home_screen/res/account_top_card.dart';
+import 'package:assignment_ui/banking_app/screens/home_screen/res/icon_cards.dart';
 import 'package:flutter/material.dart';
 
 class BankingHomeScreen extends StatelessWidget {
@@ -34,7 +35,7 @@ class BankingHomeScreen extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate.fixed(
               [
-                AccountTopcard(),
+                const AccountTopcard(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
@@ -61,18 +62,7 @@ class BankingHomeScreen extends StatelessWidget {
                       crossAxisCount: 3,
                       mainAxisSpacing: 10,
                       crossAxisSpacing: 10),
-                  itemBuilder: (context, index) => Card(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: const [
-                        Icon(Icons.mobile_friendly),
-                        Text(
-                          'My Account',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-                  ),
+                  itemBuilder: (context, index) => IconCards(index: index),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -82,7 +72,7 @@ class BankingHomeScreen extends StatelessWidget {
                         'assets/banking app/Banking app logo.png',
                         width: 40,
                       ),
-                      SizedBox(width: 15),
+                      const SizedBox(width: 15),
                       const Text(
                         'LAST TRANSACTIONS',
                         style: TextStyle(
@@ -92,12 +82,13 @@ class BankingHomeScreen extends StatelessWidget {
                   ),
                 ),
                 ListView.separated(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) => ClipRRect(
                           borderRadius: BorderRadius.circular(12),
                           child: Container(
+                            color: Colors.white,
                             child: Row(
                               children: [
                                 Container(
@@ -105,11 +96,32 @@ class BankingHomeScreen extends StatelessWidget {
                                   height: 100,
                                   color: Colors.red.shade900,
                                 ),
+                                SizedBox(width: 15),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      'CWDR/ \n974884/9874513365478965',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 16),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text('10-06-2019')
+                                  ],
+                                ),
+                                Spacer(),
+                                Text(
+                                  'INR. 10,000.00',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14),
+                                )
                               ],
                             ),
                           ),
                         ),
-                    separatorBuilder: (context, index) => SizedBox(
+                    separatorBuilder: (context, index) => const SizedBox(
                           height: 10,
                         ),
                     itemCount: 5)
