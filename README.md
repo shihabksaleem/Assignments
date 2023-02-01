@@ -4,7 +4,7 @@ Repository showcasing different UI examples using Flutter.
 
 | Farmers FreshZome  Ui |Banking App ui |Expansion Tile Card |
 |----------|----------|----------|
-|<img align="right" alt="VIDEO" width="300" width="300" src="https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/farmers_fresh_zone/github%20500.gif">|<img align="right" alt="VIDEO" width="300" width="300" src="https://github.com/shihabksaleem/flutter-ui/blob/master/assets/routesAssets/banking_app_gif.gif?raw=true">|<img align="right" alt="VIDEO" width="300" width="300" src="https://github.com/shihabksaleem/flutter-ui/blob/master/assets/routesAssets/expansion_tile_with_lottie.gif?raw=true">|
+|<img align="right" alt="FarmersFreshZone" width="300" width="300" src="https://github.com/shihabksaleem/flutter-ui/blob/master/screenshots/farmers_fresh_zone/github%20500.gif">|<img align="right" alt="BankingAppUi" width="300" width="300" src="https://github.com/shihabksaleem/flutter-ui/blob/master/assets/routesAssets/banking_app_gif.gif?raw=true">|<img align="right" alt="ExpansionTileCardWithLottie" width="300" width="300" src="https://github.com/shihabksaleem/flutter-ui/blob/master/assets/routesAssets/expansion_tile_with_lottie.gif?raw=true">|
 
 ### Login and sign up sample  Ui
 | FIRST SCREEN | SECOND SCREEN | REWARDS SCREEN | PROFILE SCREEN |
